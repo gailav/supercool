@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@angular/cli": "^20.1.5",
+    "nvm": "^0.0.4"
+  }
+}
