@@ -1,0 +1,4 @@
+<div class="calculator-container-border">
+  @for (button of calculatorNumberButtons; track button.buttonValue){
+    <app-button [buttonValue]="button.buttonValue" [buttonColour]="button.buttonColour"></app-button>}
+</div>
