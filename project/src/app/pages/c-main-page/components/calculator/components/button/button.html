@@ -1,10 +1,10 @@
 @if (buttonZeroWidth() === 80) {
-  <div class="calculator-button" [style.width] = "buttonZeroWidth() + 'px'">
+  <div class="calculator-button" [style.width] = "buttonZeroWidth() + 'px'" (click)="buttonClickedEvent.emit(buttonValue())">
     <p>{{buttonValue()}}</p>
   </div>
 }
 @if (buttonZeroWidth() !== 80) {
-  <div class="calculator-button" [style.width]="buttonZeroWidth() + 'px'">
+  <div class="calculator-button" [style.width]="buttonZeroWidth() + 'px'" (click)="buttonClickedEvent.emit(buttonValue())">
     <p>lol</p>
     <p>{{buttonValue()}}</p>
     <p>{{buttonColour()}}</p>

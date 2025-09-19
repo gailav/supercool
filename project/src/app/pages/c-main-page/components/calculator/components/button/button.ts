@@ -1,4 +1,4 @@
-import {Component, computed, Input, input, OnInit} from '@angular/core';
+import {Component, computed, Input, input, OnInit, output} from '@angular/core';
 
 @Component({
   selector: 'app-button',
@@ -20,6 +20,7 @@ export class Button implements OnInit {
   //     return 300;
   //   }
   // })
+  buttonClickedEvent = output<string | undefined>();
   ngOnInit(): void {
     console.log(this.buttonWidth);
     console.log(this.buttonWidth());

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, input} from '@angular/core';
 
 @Component({
   selector: 'app-display',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './display.scss'
 })
 export class Display {
-
+displayValue = input<string | undefined>();
 }

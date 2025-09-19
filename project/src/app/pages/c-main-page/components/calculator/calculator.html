@@ -1,16 +1,16 @@
 <div class="calculator-container-border">
   <div class="calculator-display-container">
-    <app-display></app-display>
+    <app-display [displayValue]="buttonFunctionService.displayValue"></app-display>
   </div>
   <div class="calculator-buttons-container">
   <div class="calculator-numbers-container">
   @for (button of calculatorNumberButtons; track button.buttonValue){
-    <app-button [buttonValue]="button.buttonValue" [buttonColour]="button.buttonColour" [buttonWidth]="button.buttonWidth"></app-button>
+    <app-button [buttonValue]="button.buttonValue" [buttonColour]="button.buttonColour" [buttonWidth]="button.buttonWidth" (buttonClickedEvent)="buttonFunctionService.addValueToDisplay($event)"></app-button>
   }
   </div>
     <div class="calculator-function-container">
   @for (button of calculatorFunctionsButtons; track button.buttonValue){
-    <app-button [buttonValue]="button.buttonValue" [buttonColour]="button.buttonColour" [buttonWidth]="button.buttonWidth"></app-button>
+    <app-button [buttonValue]="button.buttonValue" [buttonColour]="button.buttonColour" [buttonWidth]="button.buttonWidth" (buttonClickedEvent)="buttonFunctionService.addValueToDisplay($event)"></app-button>
   }
     </div>
   </div>
