@@ -1,4 +1,5 @@
 export interface CalculatorButtonConfig {
-  buttonValue: number;
+  buttonWidth?: number;
+  buttonValue: string;
   buttonColour?: string;
 }

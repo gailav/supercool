@@ -1,4 +1,17 @@
 <div class="calculator-container-border">
+  <div class="calculator-display-container">
+    <app-display></app-display>
+  </div>
+  <div class="calculator-buttons-container">
+  <div class="calculator-numbers-container">
   @for (button of calculatorNumberButtons; track button.buttonValue){
-    <app-button [buttonValue]="button.buttonValue" [buttonColour]="button.buttonColour"></app-button>}
+    <app-button [buttonValue]="button.buttonValue" [buttonColour]="button.buttonColour" [buttonWidth]="button.buttonWidth"></app-button>
+  }
+  </div>
+    <div class="calculator-function-container">
+  @for (button of calculatorFunctionsButtons; track button.buttonValue){
+    <app-button [buttonValue]="button.buttonValue" [buttonColour]="button.buttonColour" [buttonWidth]="button.buttonWidth"></app-button>
+  }
+    </div>
+  </div>
 </div>

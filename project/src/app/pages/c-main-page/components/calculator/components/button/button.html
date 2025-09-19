@@ -1,4 +1,14 @@
-<div class="calculator-button">
-<p>{{buttonValue()}}</p>
-<p>{{buttonColour()}}</p>
-</div>
+@if (buttonZeroWidth() === 80) {
+  <div class="calculator-button" [style.width] = "buttonZeroWidth() + 'px'">
+    <p>{{buttonValue()}}</p>
+  </div>
+}
+@if (buttonZeroWidth() !== 80) {
+  <div class="calculator-button" [style.width]="buttonZeroWidth() + 'px'">
+    <p>lol</p>
+    <p>{{buttonValue()}}</p>
+    <p>{{buttonColour()}}</p>
+  </div>
+}
+
+
